@@ -7,6 +7,7 @@ import { MatGridListModule} from '@angular/material/grid-list'
 import { MatListModule} from '@angular/material/list'
 import {MatCardModule} from '@angular/material/card'
 import {MatButtonModule} from '@angular/material/button'
+import {MatIconModule} from '@angular/material/icon';
 
 import { AppComponent } from './app.component';
 
@@ -15,12 +16,16 @@ import { MenuComponent } from './menu/menu.component';
 import { DishdetailComponent } from './dishdetail/dishdetail.component';
 
 import { DishService } from './services/dish.service';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    DishdetailComponent
+    DishdetailComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -30,8 +35,9 @@ import { DishService } from './services/dish.service';
     MatListModule,
     MatGridListModule,
     MatCardModule,
-    MatButtonModule
-  ],
+    MatButtonModule,
+    MatIconModule
+    ],
   providers: [
     DishService
   ],
