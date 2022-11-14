@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { LeaderService } from '../services/leader.service';
+import { Leader } from '../shared/leader';
+import { LEADERS } from '../shared/leaders';
 
 @Component({
   selector: 'app-about',
@@ -7,9 +11,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
+  leaders: Leader[];
 
-  ngOnInit(): void {
+  constructor(private leaderService: LeaderService,
+    private route:ActivatedRoute) { }
+
+  ngOnInit() {
+    let id = this.route.snapshot.params['id'];
+    this.leaders = this.leaderService.getLeaders();
   }
+
+
 
 }
