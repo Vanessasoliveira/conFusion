@@ -12,7 +12,10 @@ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule} from '@angular/material/form-field';
 import { MatInput, MatInputModule} from '@angular/material/input';
 import { MatCheckboxModule} from '@angular/material/checkbox';
+import { MatSelectModule} from '@angular/material/select';
+import { MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 
@@ -59,7 +62,10 @@ import { LoginComponent } from './login/login.component';
     MatDialogModule,
     MatFormFieldModule,
     MatCheckboxModule,
-    MatInputModule
+    MatInputModule,
+    MatSelectModule,
+    MatSlideToggleModule,
+    ReactiveFormsModule
     ],
   providers: [
     DishService,
