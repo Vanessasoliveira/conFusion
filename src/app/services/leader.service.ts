@@ -9,35 +9,35 @@ export class LeaderService {
 
   constructor() { }
 
-  getLeaders():Leader[]{
-    return LEADERS;
+  getLeaders(): Promise<Leader[]>{
+    return Promise.resolve(LEADERS);
   }
 
-  getLeader(id: string): Leader{
-    return LEADERS.filter((leader)=> (leader.id === id))[0];
+  getLeader(id: string): Promise<Leader>{
+    return Promise.resolve(LEADERS.filter((leader)=> (leader.id === id))[0]);
   }
-  getNameLeader(id: string): Leader{
-    return LEADERS.filter((leader)=> (leader.name))[0];
-  }
-
-  getImageLeader(): Leader{
-    return LEADERS.filter((leader)=> leader.image)[0];
+  getNameLeader(id: string): Promise<Leader>{
+    return Promise.resolve(LEADERS.filter((leader)=> (leader.name))[0]);
   }
 
-  getDesignation(id: string): Leader{
-    return LEADERS.filter((leader)=> (leader.designation))[0];
+  getImageLeader(): Promise<Leader>{
+    return Promise.resolve(LEADERS.filter((leader)=> leader.image)[0]);
   }
 
-  getAbbrLeader(): Leader{
-    return LEADERS.filter((leader)=> leader.image)[0];
+  getDesignation(id: string): Promise<Leader>{
+    return Promise.resolve(LEADERS.filter((leader)=> (leader.designation))[0]);
   }
 
-  getFeaturedLeader(): Leader{
-    return LEADERS.filter((leader)=> leader.featured)[0];
+  getAbbrLeader(): Promise<Leader>{
+    return Promise.resolve(LEADERS.filter((leader)=> leader.image)[0]);
   }
 
-  getDescriptionLeader(): Leader{
-    return LEADERS.filter((leader)=> leader.image)[0];
+  getFeaturedLeader(): Promise<Leader>{
+    return Promise.resolve(LEADERS.filter((leader)=> leader.featured)[0]);
+  }
+
+  getDescriptionLeader(): Promise<Leader>{
+    return Promise.resolve(LEADERS.filter((leader)=> leader.image)[0]);
   }
 
 
